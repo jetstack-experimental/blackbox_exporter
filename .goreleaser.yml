@@ -1,0 +1,18 @@
+builds:
+  -
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+    goarch:
+      - amd64
+    flags: -a -tags netgo
+archive:
+  format: binary
+release:
+  github:
+    owner: jetstack-experimental
+    name: blackbox_exporter
+
+gpg_signing:
+  key_id: 9A1C42C8F5AA3CE6
